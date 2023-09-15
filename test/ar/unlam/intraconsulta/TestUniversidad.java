@@ -63,7 +63,7 @@ public class TestUniversidad {
     	Integer dni= 44555; 
         Alumno alumno = new Alumno (dni,apellido, nombre);
     	unlam.registrar(alumno);
-    	assertTrue (unlam.inscribirAlumnoAUnaMateria(dni,codigo)) ;
+    	assertTrue (unlam.inscribirAlumnoAUnaMateria(dni,codigo, comision));
     	       
 	}
 	
