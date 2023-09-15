@@ -78,16 +78,15 @@ public class TestUniversidad {
     	assertNotNull(primerCuatrimestreDosMilVeintitres);      
 	}
 	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-
-	
+	@Test
+	public void queSePuedaCrearUnProfesor() {
+    	Integer dni = 40305;
+    	String apellido = "Guarnieri";
+    	String nombre = "Matias";
+    	
+    	Profesor primerCuatrimestreDosMilVeintitres = new Profesor(dni, apellido, nombre);
+    	
+    	assertNotNull(primerCuatrimestreDosMilVeintitres);      
+	}
 
 }
