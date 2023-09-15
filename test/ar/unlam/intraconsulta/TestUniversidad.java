@@ -52,7 +52,7 @@ public class TestUniversidad {
 	
 	@Test
 	public void queSePuedaInscribirUnAlumnoenMateria() {
-		 String  nombre = "Unlam";
+		String  nombre = "Unlam";
     	Universidad unlam = new Universidad (nombre);
     	nombre = "PB2 ";
         Integer codigo = 1;
@@ -63,22 +63,30 @@ public class TestUniversidad {
     	Integer dni= 44555; 
         Alumno alumno = new Alumno (dni,apellido, nombre);
     	unlam.registrar(alumno);
-    	assertTrue (unlam.inscribirAlumnoAUnaMateria(dni,codigo, comision));
+    	assertTrue (unlam.inscribirAlumnoAUnaMateria(dni,codigo));
     	       
 	}
 	
+	@Test
+	public void queSePuedaCrearUnClicloLectivo() {
+    	Integer id = 01;
+    	String cuatrimestre = "1C";
+    	Integer anio = 2023;
+    	
+    	CicloLectivo primerCuatrimestreDosMilVeintitres = new CicloLectivo(id, cuatrimestre, anio);
+    	
+    	assertNotNull(primerCuatrimestreDosMilVeintitres);      
+	}
 	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-
-	
+	@Test
+	public void queSePuedaCrearUnProfesor() {
+    	Integer dni = 40305;
+    	String apellido = "Guarnieri";
+    	String nombre = "Matias";
+    	
+    	Profesor primerCuatrimestreDosMilVeintitres = new Profesor(dni, apellido, nombre);
+    	
+    	assertNotNull(primerCuatrimestreDosMilVeintitres);      
+	}
 
 }
